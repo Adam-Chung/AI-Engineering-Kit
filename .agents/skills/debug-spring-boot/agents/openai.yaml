@@ -1,0 +1,4 @@
+interface:
+  display_name: "Debug Spring Boot"
+  short_description: "Diagnose Spring Boot failures with evidence"
+  default_prompt: "Use $debug-spring-boot to diagnose this Spring Boot failure and explain the evidence."

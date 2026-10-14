@@ -1,0 +1,36 @@
+{
+  "skill": "debug-spring-boot",
+  "cases": [
+    {
+      "name": "triggers-on-spring-startup-failure",
+      "prompt": "My Spring Boot service fails to start with NoSuchBeanDefinitionException. Diagnose the root cause.",
+      "expected": {
+        "trigger": true,
+        "must_include": ["exception chain", "active profile", "evidence"],
+        "must_not": ["edit code without a fix request"]
+      }
+    },
+    {
+      "name": "triggers-on-jpa-transaction-failure",
+      "prompt": "Find why this Spring Data JPA request ends in UnexpectedRollbackException even though the inner exception is caught.",
+      "expected": {
+        "trigger": true,
+        "must_include": ["transaction boundary", "rollback-only", "reproduction or limitation"]
+      }
+    },
+    {
+      "name": "does-not-trigger-on-feature-work",
+      "prompt": "Add a new REST endpoint to this Spring Boot application.",
+      "expected": {
+        "trigger": false
+      }
+    },
+    {
+      "name": "does-not-trigger-on-generic-java-learning",
+      "prompt": "Explain Java records with a simple example.",
+      "expected": {
+        "trigger": false
+      }
+    }
+  ]
+}

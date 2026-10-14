@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "name": "diagnosis-only",
+      "prompt": "Find the root cause of this production exception.",
+      "expected_rules": ["shared/rules/DEBUG_RULES.md"],
+      "must_not": ["modify files without a fix request"]
+    },
+    {
+      "name": "spring-diagnosis",
+      "prompt": "Diagnose this Spring Boot startup NoSuchBeanDefinitionException.",
+      "expected_rules": ["shared/rules/DEBUG_RULES.md"],
+      "expected_skills": ["debug-spring-boot"]
+    },
+    {
+      "name": "feature-implementation",
+      "prompt": "Add a REST endpoint to this service.",
+      "expected_rules": ["shared/rules/DEVELOPMENT_RULES.md"],
+      "unexpected_skills": ["debug-spring-boot"]
+    },
+    {
+      "name": "public-data-project",
+      "prompt": "Publish a crawler that collects public website content.",
+      "expected_rules": [
+        "shared/rules/DEVELOPMENT_RULES.md",
+        "shared/rules/PUBLIC_DATA_COMPLIANCE.md"
+      ]
+    },
+    {
+      "name": "small-fix-no-delegation",
+      "prompt": "Fix this one-line null check in a single file.",
+      "expected_rules": ["shared/rules/DEVELOPMENT_RULES.md"],
+      "unexpected_agents": ["planner", "architect", "implementer", "reviewer", "writer"]
+    },
+    {
+      "name": "cross-service-design-delegates-architect",
+      "prompt": "Compare two designs for adding an event between the order service and the inventory service, tracing the existing call chains in both.",
+      "expected_agents": ["architect"]
+    },
+    {
+      "name": "large-review-delegates-reviewer",
+      "prompt": "Review this pull request that touches the Java backend, the Angular frontend, and the database migrations, and list every issue you find.",
+      "expected_agents": ["reviewer"]
+    }
+  ]
+}

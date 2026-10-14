@@ -1,0 +1,4 @@
+interface:
+  display_name: "繁體中文技術撰寫"
+  short_description: "以繁體中文撰寫程式註解、技術說明、操作說明與開發文件"
+  default_prompt: "Use $traditional-chinese-technical-writing to write code comments and technical explanations in Traditional Chinese."

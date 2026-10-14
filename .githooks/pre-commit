@@ -1,0 +1,24 @@
+#!/bin/sh
+# Runs the framework validator before allowing a commit in this repository.
+#
+# Enable once per clone with:
+#   git config core.hooksPath .githooks
+#
+# Requires Node.js on PATH.
+
+root="$(git rev-parse --show-toplevel)"
+
+if ! command -v node >/dev/null 2>&1; then
+  echo "pre-commit: Node.js not found on PATH, skipping validate-framework.js." >&2
+  echo "pre-commit: install Node.js or run it manually before pushing." >&2
+  exit 0
+fi
+
+node "$root/validators/validate-framework.js"
+status=$?
+
+if [ $status -ne 0 ]; then
+  echo "pre-commit: validate-framework.js failed. Fix the errors above before committing." >&2
+fi
+
+exit $status

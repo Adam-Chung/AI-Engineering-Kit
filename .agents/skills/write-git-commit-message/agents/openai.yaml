@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Commit Message Writer"
+  short_description: "Generate accurate English commit messages from staged changes"
+  default_prompt: "Use $write-git-commit-message to create an accurate English commit message for my staged changes."

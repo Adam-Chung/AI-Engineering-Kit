@@ -1,0 +1,24 @@
+### Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+### Dependencies and generated output
+node_modules/
+coverage/
+dist/
+.archify/
+
+### Editor and operating-system state
+.obsidian/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk

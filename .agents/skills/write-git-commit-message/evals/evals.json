@@ -1,0 +1,37 @@
+{
+  "skill": "write-git-commit-message",
+  "cases": [
+    {
+      "name": "triggers-on-staged-commit-message-request",
+      "prompt": "Inspect my staged changes and give me the best commit message.",
+      "expected": {
+        "trigger": true,
+        "must_include": ["staged diff", "English", "imperative"],
+        "must_not": ["commit without explicit authorization"]
+      }
+    },
+    {
+      "name": "triggers-on-chinese-draft-optimization",
+      "prompt": "Please optimize this commit message: feat: 串接 AI 投資建議與前端部署設定",
+      "expected": {
+        "trigger": true,
+        "must_include": ["natural technical English", "actual diff"]
+      }
+    },
+    {
+      "name": "recommends-splitting-unrelated-changes",
+      "prompt": "Create one commit message for staged UI changes, a database migration, and an unrelated CI fix.",
+      "expected": {
+        "trigger": true,
+        "must_include": ["separate commits", "coherent change"]
+      }
+    },
+    {
+      "name": "does-not-trigger-on-generic-git-command",
+      "prompt": "How do I list remote Git branches?",
+      "expected": {
+        "trigger": false
+      }
+    }
+  ]
+}
