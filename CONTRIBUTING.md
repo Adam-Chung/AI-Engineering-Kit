@@ -11,8 +11,10 @@ Before submitting an issue:
 3. Remove credentials, personal data, customer information, internal URLs, and
    confidential configuration.
 
-Code contributions are not accepted until the repository owner adopts a formal
-contribution and licensing policy. Pull requests may be closed without review.
+The repository license permits private personal modifications but does not
+grant redistribution rights. Do not publish a modified copy or open a code pull
+request without prior written permission from the repository owner. Pull
+requests submitted without that permission may be closed without review.
 
 For local validation, run:
 

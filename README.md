@@ -87,8 +87,10 @@ node validators/validate-public.js
 - Issue 與文件改善建議歡迎依 [CONTRIBUTING.md](CONTRIBUTING.md) 提交。
 - 第三方資料、網站 automation 與素材仍需逐項確認 Terms、license、privacy、
   rate limits、attribution 與 redistribution rights。
-- 本 repository 尚未採用 repository-level open-source license；詳見
-  [LICENSE_STATUS.md](LICENSE_STATUS.md)。
+- 本 repository 採用 [Personal Non-Commercial License 1.0](LICENSE)：自然人可
+  下載、學習、執行及為自己進行私人修改，但不得用於工作、公司／組織、營利、
+  代客或 hosted-service 用途，也不得再散布原始或修改內容。這是
+  **source-available** 授權，不是 Open Source。
 
 ---
 
@@ -184,5 +186,8 @@ sensitive-content patterns, and forbidden paths.
 - Third-party data, website automation, and assets require case-specific review
   of Terms, licensing, privacy, rate limits, attribution, and redistribution
   rights.
-- No repository-level open-source license has been selected. See
-  [LICENSE_STATUS.md](LICENSE_STATUS.md).
+- This repository uses the [Personal Non-Commercial License 1.0](LICENSE).
+  Individuals may download, study, run, and privately modify it for personal
+  non-commercial purposes. Employment, organizational, commercial, client,
+  hosted-service, and redistribution uses are prohibited. This is a
+  **source-available** license, not an Open Source license.

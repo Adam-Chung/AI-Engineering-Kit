@@ -10,7 +10,7 @@ const requiredFiles = [
   "README.md",
   "SECURITY.md",
   "CONTRIBUTING.md",
-  "LICENSE_STATUS.md",
+  "LICENSE",
   "shared/profiles/PERSONAL_PROFILE.md",
   "shared/profiles/TECHNICAL_PROFILE.md"
 ];
