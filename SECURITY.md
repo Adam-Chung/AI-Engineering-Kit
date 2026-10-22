@@ -1,5 +1,17 @@
 # Security Policy
 
+## Public Security Boundary
+
+This repository is the source-available public version of AI Engineering Kit.
+Production state is excluded, including credentials, personal profiles, local
+workspace state, Private publication controls, and deployment-specific
+material.
+
+This repository is not a deployment-ready security template. Adopters remain
+responsible for reviewing authentication, authorization, secret management,
+data handling, dependency risk, logging, infrastructure, and deployment
+controls for their own environments.
+
 ## Reporting a Vulnerability
 
 Use GitHub's security-advisory reporting channel for security vulnerabilities.
