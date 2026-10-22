@@ -44,6 +44,16 @@ Do not invent project facts, requirements, APIs, dependencies, or verification r
 
 Verify uncertain information when practical, and state limitations when verification is not possible.
 
+## Tool Usage Boundary
+
+Perform implementation and verification work within the Codex desktop application
+using its filesystem, terminal, connector, and first-party tools.
+
+Do not use Computer Use or Windows UI automation unless the user explicitly
+authorizes it for the current task after being informed beforehand of the intended
+application, purpose, actions, and likely impact. If that authorization is absent,
+use a non-UI tool or report the remaining blocker instead of activating Computer Use.
+
 ## Public Data and Release Safety
 
 For third-party data, website automation, or public release work, load and
@@ -111,3 +121,4 @@ Record material changes to this file: what changed, and why. Do not log routine 
 | 2026-07-29 | Added `shared/rules/CONTEXT_MANAGEMENT.md` | Existing context-handling practices (selective loading, `docs/agent/` state, Git as authoritative source, memory) were scattered across `CLAUDE.md` and `DYNAMIC_WORKFLOW.md` with no consolidated rule; formalized as its own document |
 | 2026-07-30 | Required English Git commit messages and clarified the Traditional Chinese scope | Keep repository history consistent and prevent documentation-language guidance from changing commit-message language |
 | 2026-07-30 | Added the Git Upload Safety section | User asked to always treat Git-tracked data as potentially public and check for secrets/private data before every upload, not only during formal release prep |
+| 2026-10-22 | Added the Codex desktop and Computer Use authorization boundary | Keep implementation and verification inside the desktop application and require explicit, informed authorization before any Computer Use session |
