@@ -93,6 +93,10 @@ link-maintenance files.
 - Use clear heading hierarchy: one H1 for the file topic, H2 for major concepts,
   H3 for mechanisms or subtopics, and H4 only when a deeper subdivision is
   genuinely needed. Do not skip heading levels.
+- Directly below each H2/H3 heading and any tag line, add a `> **重點：**`
+  block with one or two sentences that summarize the section's core meaning,
+  decision, or relationship. Do not merely repeat the heading; the summary
+  should let a reader decide whether to continue into the detailed explanation.
 - Add `**易錯點**`, examples, comparison tables, code, Mermaid diagrams, or
   images when they materially improve understanding. Visuals should explain a
   relationship, sequence, state change, topology, or otherwise difficult idea;
@@ -157,6 +161,8 @@ knowledge point.
   are present where relevant.
 - Heading hierarchy is logical, and diagrams or images are used only where they
   improve comprehension.
+- Every H2/H3 section begins with a one- or two-sentence `重點` summary after
+  the heading and any tag line.
 - Tags are useful rather than exhaustive.
 - Heading links resolve to real files and sections.
 - Map summaries point to detailed notes without duplicating their full content.

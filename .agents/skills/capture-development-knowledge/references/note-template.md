@@ -17,12 +17,18 @@ updated: YYYY-MM-DD
 
 #technology #concept #interview/core
 
-Start with a plain-language definition or conclusion. Then explain the relevant
+> **重點：** Use one or two sentences to state the section's core meaning,
+> decision, or relationship without merely repeating the heading.
+
+Then explain the relevant
 purpose, mechanism, flow, decision criteria, trade-offs, limitations, and
 failure modes. Use paragraphs and bullets according to the relationship between
 ideas; no fixed bullet count applies.
 
 ### <Mechanism or Subtopic>
+
+> **重點：** Summarize what this mechanism does and why it matters in one or
+> two sentences.
 
 Explain how the concept works. Add a minimal example, comparison table, code,
 Mermaid diagram, or image when it makes the knowledge materially easier to
@@ -47,9 +53,11 @@ understand.
 Each knowledge point needs:
 
 1. a descriptive heading;
-2. 2–5 useful inline tags; and
-3. a clear definition or conclusion; and
-4. enough explanation to understand how and when the concept applies.
+2. 2–5 useful inline tags;
+3. a one- or two-sentence `> **重點：**` summary directly below the heading
+   and any tag line;
+4. a clear definition or conclusion; and
+5. enough explanation to understand how and when the concept applies.
 
 `易錯點`, `關聯`, code, tables, diagrams, references, and status markers are
 conditional. Add them only when they improve accuracy or retrieval.
@@ -58,6 +66,8 @@ conditional. Add them only when they improve accuracy or retrieval.
 
 - Use one H1 for the file topic, H2 for major knowledge points, H3 for mechanisms
   or subtopics, and H4 only when necessary. Do not skip heading levels.
+- Add a `重點` summary below every H2/H3 heading and any tag line. It should
+  explain the key concept or judgment, not restate the title.
 - Explain specialized terms and named solutions on first meaningful use; do not
   leave them as unexplained keyword lists.
 - Keep derivations, examples, and case context when they clarify the mechanism
