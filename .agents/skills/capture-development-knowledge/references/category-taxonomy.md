@@ -1,7 +1,8 @@
 # Knowledge Base Categories
 
-Use exactly these five top-level categories. Do not create another top-level
-category without the user's explicit approval.
+Use these five subject categories. `Maps/` is a separate summary and navigation
+layer, not a sixth subject category. Do not create another subject category
+without the user's explicit approval.
 
 ## Backend
 
@@ -52,7 +53,7 @@ Book-specific notes that preserve the author's structure or require book
 assets. A book may keep its own subfolder, main Markdown note, images, and
 diagrams.
 
-If a book insight becomes a reusable interview concept, summarize it in the
+If a book insight becomes reusable engineering knowledge, explain it in the
 appropriate Backend, Frontend, or Architecture file rather than moving or
 duplicating the full book discussion.
 
@@ -67,5 +68,5 @@ Use the knowledge's purpose, not just its technology name:
 - A Cloudflare Workers subrequest failure and mitigation ->
   `Implementation/Implementation.md`
 - An author's explanation of replication -> the relevant book note
-- A concise, reusable replication interview summary ->
+- A reusable replication explanation ->
   `Architecture/Distributed Systems.md`

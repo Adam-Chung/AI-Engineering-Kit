@@ -1,7 +1,7 @@
-# Concise Knowledge File Template
+# Detailed Knowledge File Template
 
 Use this as a shape, not a mandatory form. Omit optional blocks that add no
-review value.
+explanatory value.
 
 ```markdown
 ---
@@ -11,19 +11,27 @@ updated: YYYY-MM-DD
 
 # <Technology or Problem Family>
 
-> Optional one-line statement describing this file's review scope.
+> Optional one-line statement describing this file's scope.
 
 ## <Knowledge Point>
 
 #technology #concept #interview/core
 
-- Three to seven concise, standalone points.
-- Preserve the mechanism or boundary that makes the fact correct.
-- Keep each bullet focused on one idea.
+Start with a plain-language definition or conclusion. Then explain the relevant
+purpose, mechanism, flow, decision criteria, trade-offs, limitations, and
+failure modes. Use paragraphs and bullets according to the relationship between
+ideas; no fixed bullet count applies.
+
+### <Mechanism or Subtopic>
+
+Explain how the concept works. Add a minimal example, comparison table, code,
+Mermaid diagram, or image when it makes the knowledge materially easier to
+understand.
 
 **易錯點**
 
-- Add only consequential misunderstandings or interview traps.
+- Add consequential misunderstandings, operational traps, or misleading
+  simplifications.
 
 **關聯**
 
@@ -36,23 +44,31 @@ updated: YYYY-MM-DD
 
 ## Required Elements
 
-Each knowledge point needs only:
+Each knowledge point needs:
 
 1. a descriptive heading;
 2. 2–5 useful inline tags; and
-3. concise core bullets.
+3. a clear definition or conclusion; and
+4. enough explanation to understand how and when the concept applies.
 
 `易錯點`, `關聯`, code, tables, diagrams, references, and status markers are
 conditional. Add them only when they improve accuracy or retrieval.
 
-## Compression Rules
+## Depth and Structure Rules
 
-- Prefer 3–7 bullets per knowledge point.
-- Prefer one sentence per bullet.
-- Keep a small code example only when prose would be less clear.
-- Move long derivations, tutorials, case history, and extensive examples out of
-  this vault.
-- Do not add a `深入閱讀` or Notion section unless the user asks.
+- Use one H1 for the file topic, H2 for major knowledge points, H3 for mechanisms
+  or subtopics, and H4 only when necessary. Do not skip heading levels.
+- Explain specialized terms and named solutions on first meaningful use; do not
+  leave them as unexplained keyword lists.
+- Keep derivations, examples, and case context when they clarify the mechanism
+  or a decision, but remove conversation residue and unrelated history.
+- Prefer Mermaid for flows, sequences, states, and relationships; use tables for
+  exact comparisons and images for visual structures that prose cannot explain
+  efficiently.
+- Split a page when size or mixed subject boundaries make navigation difficult,
+  not merely because the note is detailed.
+- Notion content may be migrated into this vault. Merge it into the appropriate
+  section rather than creating a separate `深入閱讀` area by default.
 - Mark unverified reasoning inline with #status/hypothesis and one sentence
   explaining the uncertainty.
 
