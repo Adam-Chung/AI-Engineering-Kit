@@ -25,6 +25,17 @@ purpose, mechanism, flow, decision criteria, trade-offs, limitations, and
 failure modes. Use paragraphs and bullets according to the relationship between
 ideas; no fixed bullet count applies.
 
+When the source is an interview question, begin with its direct, plain-language
+answer and keep every distinct source point explicit. Add broader terminology
+and exceptions afterward; do not replace the original answer with abstractions
+that only imply it.
+
+```markdown
+**面試快速回答**
+
+Answer the original question directly in a short paragraph.
+```
+
 ### <Mechanism or Subtopic>
 
 > **重點：** Summarize what this mechanism does and why it matters in one or
@@ -38,6 +49,19 @@ understand.
 
 - Add consequential misunderstandings, operational traps, or misleading
   simplifications.
+
+When a useful interview rule is intentionally simplified, retain it and place
+the correction immediately after it:
+
+```markdown
+**面試常見說法**
+
+State the useful simplified rule.
+
+**更精確的說明**
+
+Explain its boundary or exception in plain Traditional Chinese.
+```
 
 **關聯**
 
@@ -58,6 +82,9 @@ Each knowledge point needs:
    and any tag line;
 4. a clear definition or conclusion; and
 5. enough explanation to understand how and when the concept applies.
+
+For source-derived interview notes, also require direct traceability from every
+source question or identifier to an explicit answer.
 
 `易錯點`, `關聯`, code, tables, diagrams, references, and status markers are
 conditional. Add them only when they improve accuracy or retrieval.

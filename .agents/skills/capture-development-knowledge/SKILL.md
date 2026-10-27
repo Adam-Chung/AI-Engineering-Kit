@@ -109,6 +109,57 @@ link-maintenance files.
   future understanding.
 - Keep uncertain content visible with #status/hypothesis and one short reason.
 
+## Source-Preserving Rewrite Standard
+
+When source material contains interview questions, teaching notes, or a simple
+list of causes and solutions, preserve its useful direct answer before adding a
+more general or technically precise explanation.
+
+Use this order when it applies:
+
+1. answer the original question directly in plain Traditional Chinese;
+2. retain every distinct cause, condition, solution, or example from the source;
+3. define the important named terms needed to understand the answer;
+4. explain the reason or mechanism with a minimal concrete example;
+5. add only the necessary correction, exception, trade-off, or implementation
+   boundary; and
+6. place optional related knowledge after the original answer rather than
+   replacing it.
+
+Do not turn a simple source statement into a harder collection of English
+keywords. For example, retain「不符合最左前綴原則」before explaining index-key
+prefixes, equality/range conditions, or optimizer behavior.
+
+When a common interview answer is useful but technically simplified, keep both
+layers and label them clearly:
+
+```markdown
+**面試常見說法**
+
+範圍查詢會使複合索引右側欄位失效。
+
+**更精確的說明**
+
+右側欄位通常不能繼續縮小索引搜尋範圍，但仍可能用於過濾、排序或覆蓋查詢。
+```
+
+For multiple source questions that ask the same thing, merge the explanation
+but retain every original question or source identifier in the coverage index.
+The reader must be able to trace each source question to an explicit answer;
+an abstract sentence that merely implies the answer is insufficient.
+
+Use Chinese as the sentence's main language. At the first meaningful use, write
+an important term as `English（繁體中文）` and immediately explain what it means.
+Preserve exact identifiers, APIs, commands, configuration keys, protocol
+fields, and code without forced translation.
+
+Add a minimal example when rules depend on field order, state, timing, request
+flow, failure mode, or other conditions that prose alone could leave ambiguous.
+Do not expand beyond the source unless a definition is required for
+understanding, the source is misleading, an important practical limitation is
+missing, or a highly likely interview follow-up would otherwise remain
+unanswered.
+
 ## Inline CODEX Instructions
 
 - In task-scoped user-authored notes, treat `<!-- CODEX: ... -->` comments as
@@ -168,3 +219,10 @@ knowledge point.
 - Map summaries point to detailed notes without duplicating their full content.
 - Source material was rewritten into maintainable knowledge rather than copied
   verbatim.
+- The section answers the source question directly before introducing broader
+  abstractions or exceptions.
+- Every distinct source answer remains explicit and traceable; none was replaced
+  by terminology that only implies it.
+- Traditional Chinese carries the explanation, while important English terms
+  receive a concise Chinese equivalent and immediate plain-language definition.
+- Rules whose outcome depends on conditions include a small concrete example.
