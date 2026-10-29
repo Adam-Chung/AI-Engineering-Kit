@@ -1,6 +1,6 @@
 ---
 name: capture-development-knowledge
-description: Convert Notion excerpts, GPT discussions, debugging lessons, code-review feedback, or newly learned concepts into clear, detailed, connected notes in engineering-knowledge/. Use when the user asks to record, organize, migrate, or expand development knowledge. Without an explicit request to write, ask for consent first.
+description: Convert Notion excerpts, GPT discussions, debugging lessons, code-review feedback, or newly learned concepts into clear, detailed, connected notes in engineering-knowledge/. Also use for the user's `Map調整` workflow in `Maps/`. Without an explicit request to write, ask for consent first.
 ---
 
 # Capture Development Knowledge
@@ -27,7 +27,21 @@ in its original source.
 - Treat every `.canvas` file under an `engineering-knowledge/Maps/` directory
   as user-maintained and read-only by default.
 - Do not create, edit, format, move, rename, or delete those Canvas files unless
-  the user explicitly requests that specific action in the current task.
+  the user explicitly authorizes the Canvas modification in the current task.
+- Authorization to edit Markdown notes, organize the knowledge base, update
+  diagrams generally, or complete a related task does not imply authorization
+  to modify a Canvas file. Ask first whenever the current task does not name or
+  unmistakably authorize the Canvas change.
+- Editing authorization and Git commit authorization are separate gates. Even
+  after the user authorizes and reviews a Canvas modification, do not stage or
+  commit any `.canvas` file until the user explicitly authorizes that commit.
+- A standing preference to commit or push other completed work never overrides
+  the Canvas-specific commit gate.
+- The exact current-task request `Map調整` is the user's standing shorthand for
+  authorizing only the diagram-format organization of every existing
+  `Maps/*.canvas` file. It does not authorize changing the cards' knowledge
+  content or adding links, and it never authorizes staging or committing a
+  Canvas file.
 - Exclude protected Canvas files from bulk formatting, staging, commits, and
   cleanup operations when the task only concerns Markdown notes.
 
@@ -178,7 +192,40 @@ unanswered.
 - Prefer links to the exact destination, for example `[[Redis#Expiration 與
   Memory Eviction]]`, so a reader can move from the overview to the explanation.
 - Treat every `.canvas` file as protected under the rules above even when a map
-  would benefit from a new link; ask for or rely on explicit authorization.
+  would benefit from a new link. Obtain explicit authorization before editing,
+  and obtain a separate explicit authorization before staging or committing it.
+
+### `Map調整` Mode
+
+When the user says `Map調整`, perform all three parts below and keep their
+outputs distinct:
+
+1. **Organize every Canvas diagram.** Read the target repository's
+   `Maps/README.md`, enumerate every existing `Maps/*.canvas` file, and apply
+   its diagram-organization rules to all of them. This phrase authorizes those
+   formatting changes for the current task. Preserve card text, links, card
+   positions, connection endpoints, and uncertain relationships unless the
+   README's organization rules explicitly require a corresponding formatting
+   change. Validate the serialized Canvas structure and links after editing.
+2. **Recommend note links without editing them.** Compare the map text with the
+   current Markdown notes and propose precise links to matching headings, but
+   do not add those links to the Canvas. Follow the link syntax and placement
+   already used in the current map. Prefer turning the existing explanatory
+   wording into a link, for example
+   `[併發事務問題](<Database#Transaction Isolation（交易隔離）>)`.
+   Never put a link directly on an L1 title. When an L1 card needs a link, put
+   `[🔍](<Observability#Metrics（指標）、Logs（日誌）與 Traces（追蹤）>)`
+   in its body; use the same search-icon form when no natural existing phrase
+   is suitable.
+3. **Review content and architecture without editing them.** Report suggested
+   additions, deletions, corrections, deduplication, and structural changes,
+   but do not apply any of those content or architecture suggestions to the
+   Canvas.
+
+In the completion report, separate the Canvas formatting changes that were
+actually applied from the link and content/architecture suggestions that were
+not applied. Stop and ask when a level, relationship, or README rule cannot be
+determined without reconnecting or reinterpreting the diagram.
 
 Place 2–5 inline Obsidian tags directly below the relevant heading. Prefer:
 
