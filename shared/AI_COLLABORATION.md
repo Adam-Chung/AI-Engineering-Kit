@@ -58,6 +58,20 @@ authorizes it for the current task after being informed beforehand of the intend
 application, purpose, actions, and likely impact. If that authorization is absent,
 use a non-UI tool or report the remaining blocker instead of activating Computer Use.
 
+## Canvas Authorization Boundary
+
+Treat every `.canvas` file as user-controlled and read-only by default.
+
+- Obtain the user's explicit authorization in the current task before creating,
+  editing, formatting, moving, renaming, or deleting a Canvas file.
+- A request concerning Markdown notes, diagrams in general, knowledge-base
+  organization, or related files does not implicitly authorize Canvas changes.
+- Authorization to modify a Canvas file does not authorize staging or committing
+  it. Ask for a separate explicit approval before any Canvas file is staged or
+  committed.
+- Standing commit or push preferences for other work do not override either
+  Canvas authorization gate.
+
 ## Public Data and Release Safety
 
 For third-party data, website automation, or public release work, load and
@@ -129,3 +143,4 @@ Record material changes to this file: what changed, and why. Do not log routine 
 
 | 2026-10-26 | Added inline CODEX comment handling and linked the technical-writing Skill | Apply user-authored editing requests embedded in task-scoped files while respecting analysis-only requests |
 | 2026-10-27 | Changed completed CODEX comments to be removed by default | The user wants resolved inline editing markers cleaned up unless explicitly preserved |
+| 2026-10-27 | Added separate Canvas modification and commit authorization gates | The user requires explicit approval before any Canvas change and another explicit approval before committing it |
